@@ -1,6 +1,7 @@
 import streamlit as st
 from multiapp import MultiApp
 from apps import (
+    home,
     SignalandImageProcessing,
     OptimisationMethodsforDataScience,
     StatisticsforDataScience,
@@ -36,6 +37,8 @@ st.write(
 )
 
 # Add all your application here
+app.add_app("Home", home.app)
+
 app.add_app("Signal and Image Processing", SignalandImageProcessing.app)
 app.add_app(
     "Optimisation Methods for Data Science", OptimisationMethodsforDataScience.app
